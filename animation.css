@@ -1,0 +1,65 @@
+
+/* Hover Animations for Navigation Links */
+.nav-links a:hover {
+    color: #3498db; /* Change color on hover */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Entrance Animations for Sections */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2.6s ease, transform 2.6s ease;
+   transition-delay: 1s;
+   animation-delay: 3s;
+}
+.section[data-aos="fade-up"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Animations */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Gallery Image Hover Effects */
+.gallery img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Scroll Animations */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+   
+}
+
+
+.section__pic-container {
+    animation: fadeInZoom 1s ease-out;
+  }
+  
+  @keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .about-container {
+    animation: slideInLeft 1s ease-in;
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  

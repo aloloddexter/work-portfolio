@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operator = document.getElementById("operator").value;
+            var resultElement = document.getElementById("result");
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultElement.textContent = "PATAKAAA!!!!";
+                return;
+            }
+
+            var result;
+            switch (operator) {
+
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Taka taka raka";
+            }
+
+            resultElement.textContent = "The result is: " + result;
+        }
+    </script>
+</head>
+<body>
+   <p>First Number: <input type="number" id="num1"></p> <br>
+   <select id="operator">
+
+        <option value="*">Multiply</option>
+        <option value="/">Divide</option>
+    </select>
+    <p>Second Number: <input type="number" id="num2"></p> 
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+</body>
+</html>

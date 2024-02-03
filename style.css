@@ -1,0 +1,747 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: black;
+}
+/*body.dark-mode {
+  background-color: black;
+  color: white;
+}*/
+/* Existing light mode styles */
+/* ... */
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: black; /* Dark background for dark mode */
+  color: #ffffff; /* Light text for dark mode */
+}
+
+/* Ensure all text in dark mode is light-colored */
+body.dark-mode, 
+body.dark-mode p, 
+body.dark-mode a, 
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #ffffff; /* This will make the text color white */
+}
+
+/* You might want to add rules for other elements like buttons or links */
+body.dark-mode a, 
+body.dark-mode button {
+  color: #ffffff; /* Adjust the color as necessary */
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+ 
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  background-color:orange;
+  text-decoration:solid;
+  
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+  padding-left: 50%;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Light color for visibility */
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333333; /* Darker background */
+  color: #ffffff; /* Light text color */
+  width: fit-content;
+  max-height: 0;
+  overflow: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff; /* Light text color */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:nth-child(2) {
+  opacity: 1;
+}
+
+.hamburger-icon span:last-child {
+  transform: none;
+}
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  order: initial;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+  order: 1;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+ 
+}
+
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: absolute;
+  display: contents;
+}
+
+
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  border-radius: 1rem;
+
+
+}
+
+.project-title {
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+
+
+
+/*GPT Added solution*/
+
+/* General card style */
+.details-container.color-container {
+  border: 1px solid rgb(163, 163, 163); /* Adjust as needed */
+  background: rgb(250, 250, 250);
+  border-radius: 20px; /* This gives the rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow */
+  padding: 20px; /* This adds space inside the card */
+  margin: 1rem; /* This adds space outside the card */
+  transition: transform 0.3s ease; /* This adds a transition effect */
+   
+}
+/*DARK MODE TEXT*/
+/* For the h3 headings within the .details-container */
+.details-container h3 {
+  color:#121212; /* Replace #yourColor with the color hex code of your choice */
+}
+
+/* For the p paragraphs within the .details-container */
+.details-container p {
+  color:#121212; /* Replace #yourColor with the color hex code of your choice */
+}
+
+/* For dark mode */
+body.dark-mode .details-container h3 {
+  color:#121212 /* Color for headings in dark mode */
+}
+
+body.dark-mode .details-container p {
+  color:#121212 /* Color for text in dark mode */
+}
+
+body.dark-mode .experience-sub-title.project-title {
+  color:#121212; /* e.g., white text would be #ffffff */
+}
+/* For dark mode */
+body.dark-mode .experience-sub-title {
+  color:#121212; /* e.g., white text would be #ffffff */
+}
+
+
+
+
+/* Image style */
+.project-img {
+  border-radius: 20px; /* Rounded corners for the image */
+  width: auto; /* Adjust width to maintain aspect ratio */
+  height: auto; /* Adjust height to maintain aspect ratio */
+  max-width: 100%; /* Ensure the image is responsive and fits the card */
+  max-height: 200px; /* Adjust based on your layout */
+}
+
+/* Hover effect for the card */
+.details-container.color-container:hover {
+  transform: translateY(-10px); /* This lifts the card up slightly on hover */
+}
+
+/* Title style */
+.project-title {
+  color: black; /* Title color */
+  text-align: center; /* Center the title text */
+  margin: 10px 0; /* Space above and below the title */
+}
+
+/* Button style */
+.project-btn {
+  background-color: black; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Slightly rounded corners for the button */
+  text-transform: uppercase; /* Uppercase button text */
+  font-weight: bold; /* Bold button text */
+  margin-top: 15px; /* Space above the button */
+}
+
+/* Ensuring the button is centered */
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* EDUCATION SECTION */
+
+#education {
+  position:relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.education-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.education-title {
+  margin: 1rem;
+  color: black;
+}
+
+.education-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/*submenu*/
+
+/* Styling for the main navigation link items */
+.nav-links li {
+  position: relative; /* Ensures the submenu positions correctly */
+}
+
+/* Base styles for the submenu */
+.nav-links .submenu {
+  display:none;
+  position: absolute;
+  top: 100%; /* Positions the submenu right below the parent item */
+  left: 0;
+  background-color: #fff; /* Submenu background color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the submenu */
+  border-radius: 4px; /* Optional: Rounds the corners of the submenu */
+  min-width: 200px; /* Minimum width of the submenu */
+  z-index: 1000; /* Ensures the submenu is above other content */
+}
+
+/* Displaying the submenu on hover */
+.nav-links li:hover .submenu {
+  display: block;
+  opacity: 95%;
+}
+
+/* Styles for submenu items */
+.submenu li {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 15px; /* Padding inside each submenu link */
+  color: #333; /* Text color for submenu links */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 0.9em; /* Adjusts font size */
+}
+
+.submenu li a:hover {
+  background-color: #f7f7f7; /* Color change on hover for submenu links */
+  
+}
+
+/*menu bar or responsive view*/
+/* Styling for the main navigation link items within .menu-links */
+.menu-links li {
+  position: relative; /* Ensures the submenu positions correctly */
+}
+
+/* Base styles for the submenu within .menu-links */
+.menu-links .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 200px;
+  z-index: 1000;
+  max-height: 400px; /* Sets a maximum height */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Displaying the submenu on hover within .menu-links */
+.menu-links li:hover .submenu {
+  display: block; /* Changed from inline-block to block */
+}
+
+/* Styles for submenu items within .menu-links */
+.menu-links .submenu li {
+  display: block;
+}
+
+.menu-links .submenu li a {
+  display: block;
+  padding: 10px 15px; /* Padding inside each submenu link */
+  color: #333; /* Text color for submenu links */
+  text-decoration: none; /* Removes underline from links */
+  font-size: 0.9em; /* Adjusts font size */
+}
+
+.menu-links .submenu li a:hover {
+  background-color: #f7f7f7; /* Color change on hover for submenu links */
+}
+
+
+
+
+#gallery {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-section {
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gallery-sub-title {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideDown 0.7s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-image {
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+

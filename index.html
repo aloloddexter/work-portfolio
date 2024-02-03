@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dexter Alolod</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="animations.css">
+    
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo" >Dexter Alolod</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">< About/></a></li>
+          <li><a href="#education"> < Education/></a></li> <!--Experience-->
+          <li><a href="#project"onclick="toggleMenu()"> < Projects/></a></li>
+        
+          <li><a href="#contact">< Contact/></a></li>
+          
+          </li>
+<div class="bx bx-moon" id="darkmode" onclick="toggleDarkMode()"></div>
+
+          <script>
+            function toggleDarkMode() {
+              // Toggle the 'dark-mode' class on the body
+              document.body.classList.toggle('dark-mode');
+              
+              // Optionally change the icon to reflect the state
+              const modeIcon = document.getElementById('darkmode');
+              if (document.body.classList.contains('dark-mode')) {
+                modeIcon.classList.replace('bx-moon', 'bx-sun');
+              } else {
+                modeIcon.classList.replace('bx-sun', 'bx-moon');
+              }
+            }
+          </script>
+          
+
+          
+
+        </ul>
+      </div>
+    </nav>
+  
+    <nav id="hamburger-nav">
+      <div class="logo">Dexter Alolod</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li><!--Experience-->
+          <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+        
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+         
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        
+        <img class="section" data-aos="fade-up" src="./assets/profile.png" alt="Description">
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Dexter Alolod</h1>
+        <p class="section__text__p2">A 3rd year Computer Science student driven by passion who loves creating innovative solution to eradicate pressing challenges.</p>
+        
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/alolod.pdf')"
+          >
+            View Resume
+          </button>
+          <!--<button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>-->
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/link1.webp"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/dexter-alolod-541b08175/'"
+          />
+          <img
+            src="./assets/git2.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/aloloddexter'" 
+          />
+        </div>
+      </div>
+    </section><br><br><br><br>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/dexter.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Work Experience</h3>
+              <p>Clerical Aide - Provincial Treasury of Agusan del Sur 2018</p>
+              <p>Clerical Aide - Department of Agriculture 2020</p>
+              <p>Clerical Aide - Public Employment Service Office <br> of Agusan del Sur 2021 - 2023</p>
+            </div>
+          
+          </div>
+          <div class="text-container">
+            <p>
+              I am a 21-year-old Tech with an insatiable appetite for knowledge and a boundless passion for the world of technology.
+               My unwavering motivation and unrelenting optimism define me as a student constantly hungry to delve deeper into the intricacies of the Tech Industry. 
+              At the heart of my current journey lies a relentless pursuit of web application development, accompanied by a thirst for mastering diverse programming languages and modern web technologies. 
+              I am not merely an observer but an active participant in the ever-evolving landscape of tech, determined to contribute my skills and creativity to shape its future.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </section><br><br>
+    <section id="experience">
+      <p class="section__text__p1"></p>
+      <h1 class="title">Programming Language Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>VB.Net</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+             
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              
+            
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+      <!--Education-->
+      <section id="education">
+        <p class="section__text__p1"></p>
+        <h1 class="title">Educational Background</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/pces.jpg"
+                  alt="Project 1"
+                  class="education-img"
+                />
+              </div>
+              <p class="section__text__p1">Elementary</p>
+              <h2 class="experience-sub-title project-title">Patin-ay Central Elementary School</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://www.facebook.com/patinayces'"
+                >
+                  Visit Facebook Page
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/pnhs.jpg"
+                  alt="Project 2"
+                  class="education-img"
+                />
+              </div>
+              <p class="section__text__p1">Highschool</p>
+              <h2 class="experience-sub-title project-title">Patin-ay National Highschool</h2>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://www.facebook.com/patnhs'"
+                >
+                Visit Facebook Page
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/NEMSU.png"
+                  alt="Project 2"
+                  class="education-img"
+                />
+              </div>
+              <p class="section__text__p1">College</p>
+              <h2 class="experience-sub-title project-title">Northeastern Mindanao State University</h2>
+              <div class="btn-container">
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://www.facebook.com/nemsuliangacampus'"
+                >
+                Visit Facebook Page
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+ <!--Projects / Activities-->
+
+ <section id="projects">
+  <p class="section__text__p1">My Recent</p>
+  <h1 class="title" id="project">Projects</h1>
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/System.png" 
+            alt="Project 1"
+            class="project-img" 
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">NEMSU Dissertation Record Archive System</h2>
+        <p>Nemsu  Dissertation Record System, your premier academic resource for research. As a visionary digital repository, our mission is to streamline the process of archiving and accessing scholarly dissertations. Established with the aim to support and enhance the research experience, we provide a centralized platform where intellectual works are meticulously preserved and are made readily available to students, educators, and researchers worldwide.</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="window.open('https://websystemproject.site/dexter/otas/')"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/wordpress_website.png" 
+                alt="Project 1"
+                class="project-img" 
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">WordPress Website</h2>
+            <p>This WordPress website is dedicated to showcasing Vigan City, a place rich in history and culture. The content beautifully highlights the unique blend of its colonial past and vibrant present. Visitors can explore various aspects of Vigan, including its famous cobblestone streets, heritage buildings, local festivals, and culinary specialties. The site serves as a digital window to Vigan's historical legacy and contemporary charm, inviting users to discover and appreciate the city's unique cultural tapestry.
+              Visit the website for more details
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://websystemproject.site/dexter/www.dexteralolod.com/wordpress-6.3.1/wordpress/')"
+              >
+                Visit Website
+              </button>
+            </div>
+          </div>
+      
+
+</section>
+    <!--CONTACT-->
+    <section id="contact" style="margin-top: 850px;">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/mail.png" width="50px" height="50px"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:letijio02@gmail.com">Dexter Alolod</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/link1.webp"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/dexter-alolod-541b08175/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section><br><br><br>
+    <footer>
+      <p>Copyright &#169; 2024 Dexter Alolod. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

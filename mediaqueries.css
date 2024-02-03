@@ -1,0 +1,196 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  
+ 
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+ 
+/* Profile picture upside down */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+}
+
+/* Apply the animation to the element */
+.section__pic-container img {
+  animation-name: moveUpDown; /* Use the keyframes animation */
+  animation-duration: 2s; /* Animation duration (adjust as needed) */
+  animation-timing-function: ease; /* Animation timing function (easing) */
+  animation-iteration-count: infinite; /* Repeat the animation indefinitely or set a specific number */
+}
+
+/* Additional Media Queries for Responsiveness */
+
+/* Large Desktops: 1024px and above */
+@media screen and (min-width: 1024px) {
+  body {
+      font-size: 1rem; /* Adjusting font size */
+  }
+  .container {
+      max-width: 1200px; /* Max container width */
+      margin: auto; /* Centering */
+  }
+  .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+  }
+}
+
+/* Tablets: Between 768px and 1023px */
+@media screen and (max-width: 1023px) {
+  body {
+      font-size: 0.9rem;
+  }
+  .navbar {
+      padding: 10px; /* Adjust navbar padding */
+  }
+  .grid-layout {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Mobile Phones: Below 768px */
+@media screen and (max-width: 767px) {
+  body {
+      font-size: 0.8rem;
+  }
+  .navbar {
+      display: block; /* Stack navbar items */
+  }
+  .grid-layout {
+      grid-template-columns: 1fr; /* Single column layout for grids */
+  }
+  .hamburger-menu {
+      display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .submenu {
+    position: static; /* Adjust for mobile view */
+  }
+}
+/* Media queries for responsive image sizing */
+@media (min-width: 600px) { /* Adjust this breakpoint as needed */
+  .gallery-image {
+    width: calc(50% - 10px); /* Two images per row */
+  }
+}
+
+@media (min-width: 900px) { /* Adjust this breakpoint as needed */
+  .gallery-image {
+    width: calc(33% - 10px); /* Three images per row */
+  }
+}
+
+@media (min-width: 1200px) { /* Adjust this breakpoint as needed */
+  .gallery-image {
+    width: calc(25% - 10px); /* Four images per row */
+  }
+}
+
+

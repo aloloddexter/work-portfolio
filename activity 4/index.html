@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Login</title>
+  <script type="text/javascript">
+    function handleLogin(event) {
+      event.preventDefault();
+      var formData = new FormData(document.getElementById('loginForm'));
+      fetch('login.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = data.redirect;
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+    }
+    
+    window.onload = function() {
+      document.getElementById('loginForm').addEventListener('submit', handleLogin);
+    };
+  </script>
+</head>
+<body>
+
+<div>
+  <h2>Login Form</h2>
+  <form id="loginForm" action="login.php" method="post">
+    Username: <input type="text" name="username" id="username" required><br>
+    Password: <input type="password" name="password" id="password" required><br>
+    <input type="submit" value="Login" id="loginButton"><br>
+    <a href="signupForm.html">Sign up</a>
+  </form>
+  
+</div>
+</body>
+</html>

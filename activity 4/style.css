@@ -1,0 +1,94 @@
+/* Container style */
+div {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #FFA07A;  /* Light Salmon */
+  border-radius: 10px;
+  background-color: #FFFAF0;  /* Floral White */
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);  /* Dark Orange */
+}
+
+/* Form style */
+
+/* Logout button style */
+.logout-button {
+  padding: 10px 20px;
+  background-color: #FF4500;  /* Orange Red */
+  color: #FFF8DC;  /* Cornsilk */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  display: inline-block;  /* Make it inline-block so padding takes effect */
+}
+
+/* Logout button hover effect */
+.logout-button:hover {
+  background-color: #FF6347;  /* Tomato */
+  text-decoration: none;  /* Remove underline on hover */
+}
+.center {
+  text-align: center;
+}
+
+
+h2 {
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  color: #FF8C00;  /* Dark Orange */
+}
+
+form {
+  text-align: left;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Form input style */
+input[type="text"],
+input[type="password"],
+select {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #FFA07A;  /* Light Salmon */
+  border-radius: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Submit button style */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #FF4500;  /* Orange Red */
+  color: #FFF8DC;  /* Cornsilk */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+  background-color: #FF6347;  /* Tomato */
+}
+
+/* Link style */
+a {
+  text-decoration: none;
+  color: #FF8C00;  /* Dark Orange */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Link hover effect */
+a:hover {
+  text-decoration: underline;
+  color: #FF4500;  /* Orange Red */
+}
